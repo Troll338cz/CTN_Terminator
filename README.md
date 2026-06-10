@@ -19,7 +19,7 @@
 - Remove the circuit board from the top plastic case.
 
 ## Software flash
-- Connect to UART (pic provided in repo)
+- Connect to UART (pic provided in repo) at 115200 Baud
 - Set your PC to static IP in range 192.168.1.2-254
 - Start TFTP server with clean firmware ( V517ABQA3.1C0.bin )
 - Connect to modems ethernet port
