@@ -35,3 +35,8 @@
 - Follow instructions in Zyxel_CFE_nvram_EngDebugFlag.c
 - Get unlocked bootloader or a brick, this tool is a PoC and i don't guarantee any success, CFE can recover from missing nvram if its not corrupted too badly and you backed up data it needs (if it boots back into OS you can flash back mtd dump backup)...
 
+## TODO
+- Find if device can tftp boot by itself without serial console
+- Find why ATSE does not give any output
+- Maybe make mod fw that does not generate passwords with SN algo
+- Look at new device model that replaces VMG4005
