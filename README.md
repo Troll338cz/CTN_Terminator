@@ -37,6 +37,6 @@
 
 ## TODO
 - Find if device can tftp boot by itself without serial console
-- Find why ATSE does not give any output
+- Find why ATSE does not accept any seed
 - Maybe make mod fw that does not generate passwords with SN algo
 - Look at new device model that replaces VMG4005
