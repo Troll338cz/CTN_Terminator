@@ -27,7 +27,7 @@
 - Zapněte modem a přerušte autoboot
 - Příkazem ```ATUR IP:V517ABQA3.1C0.bin``` nainstalujte nový firmware a počkejte přibližně minutu.
 - Po dokončení zápisu se modem z restartuje, počkejte než se na konzoli objeví login Linuxu a pak modem obnovte do továrního nastavení.
-- Po resetu bude webové rozhraní a SSH dostupné na 192.168.1.1, hesla pro supervisor a roota si musíte vygenerovat ze sériového čísla na štítku. ( https://github.com/boginw/>
+- Po resetu bude webové rozhraní a SSH dostupné na 192.168.1.1, hesla pro supervisor a roota si musíte vygenerovat ze sériového čísla na štítku. ( https://github.com/boginw/zyxel-vmg8825-keygen )
 - Pokud nepotřebujete odemknout bootloader tak je hotovo, DSL si to samo nastaví a do par minut půjde vytočit PPPoE session na VLAN 848
 
 ## Bootloader unlock
@@ -36,3 +36,4 @@
 - Na některých zařízení vám ATSE nedá klíč (error -1) tak je třeba přehodit nastavení přímo v nvram
 - Stačí nainstalovat gcc-arm-linux-gnueabi a zbytek je v souboru Zyxel_CFE_nvram_EngDebugFlag.c
 
+Vyzkoušeno na dvou zažízení oba fungují krásně u O2
