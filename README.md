@@ -1,4 +1,6 @@
+
 # Zyxel VMG4005-B60A ( Cetin Terminátor ) Debranding quick guide
+## [[Česky](README_cz.md)]
 
 ## Requirements
 ### Hardware
