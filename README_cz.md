@@ -36,4 +36,7 @@
 - Na některých zařízení vám ATSE nedá klíč (error -1) tak je třeba přehodit nastavení přímo v nvram
 - Stačí nainstalovat gcc-arm-linux-gnueabi a zbytek je v souboru Zyxel_CFE_nvram_EngDebugFlag.c
 
+## TODO
+- Vyzkoušet unlock VMG4005-B50A a DM4200
+
 Vyzkoušeno na dvou zažízení oba fungují krásně u O2
