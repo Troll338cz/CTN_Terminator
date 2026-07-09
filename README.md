@@ -63,4 +63,4 @@ Magic number didn`t match!
 - Test zyxel multicast ✅
 - Find why ATSE does not accept any seed
 - Maybe make mod fw that does not generate passwords with SN algo
-- Look at VMG4005-B50A and DM4200
+- Look at VMG4005-B50A and DM4200 [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/)

@@ -59,6 +59,6 @@ Magic number didn`t match!
 - Resetujte vytažením napájení a přikazem ATSH zkontrolujte výstup ```Boot Module Debug Flag : 01```
 
 ## TODO
-- Vyzkoušet unlock VMG4005-B50A a DM4200
+- Vyzkoušet unlock VMG4005-B50A a DM4200 [Firmware k stažení pro DIY odemčení](https://files.qqwee.net/Zyxel/)
 
 Vyzkoušeno na dvou zažízení oba fungují krásně u O2
