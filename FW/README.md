@@ -6,4 +6,4 @@
 - MTD dump from my device
 - Kept for archival purposes, it's not really useful for anything.
 - Maybe it would work if you flashed it manually, but I don't see why you would do that...
-- There *might* be working credentials embedded in this firmware, i'm leaving the task to get them and play around to the reader.
+- There are working credentials embedded in this firmware, i'm leaving the task to get them and play around to the reader.
