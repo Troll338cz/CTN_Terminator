@@ -31,14 +31,36 @@
 - Find a tool of your choice to generate supervisor and root passwords from serial number. "zyxel-vmg8825-keygen" tested and working ok
 - Unlock done!
 
-## Bootloader unlock
+## Bootloader unlock v1 
 - Try normal ATSE+ATEN commands, if they don't work then go for risky method.
 - Install arm toolchain for cross compile for your linux distribution
 - Follow instructions in Zyxel_CFE_nvram_EngDebugFlag.c
 - Get unlocked bootloader or a brick, this tool is a PoC and i don't guarantee any success, CFE can recover from missing nvram if its not corrupted too badly and you backed up data it needs (if it boots back into OS you can flash back mtd dump backup)...
 
+## Bootloader unlock v2
+- Connect modem to a Linux PC
+- Clone and build https://github.com/bmork/zyxel-hacks/ 
+- Bring up ethernet interface ```busybox ifconfig eth0 up```
+- Start the zyeng tool as root ```sudo ./zyeng eth0```
+- Power up the device and wait for the following output:
+```
+Multiboot client version: 1.6
+
+Hit any key to stop autoboot:001
+
+Multiboot server is available for download firmware image!
+Be patient, it should be finish in 15 minutes...
+No file need to download, stop multiboot service!
+
+
+Updated Engineer Debug Flag!
+Magic number didn`t match!
+
+```
+- Power cycle the device and verify with ATSH output ```Boot Module Debug Flag : 01``` 
+
 ## TODO
-- Test zyxel multicast
+- Test zyxel multicast ✅
 - Find why ATSE does not accept any seed
 - Maybe make mod fw that does not generate passwords with SN algo
 - Look at VMG4005-B50A and DM4200

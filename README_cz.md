@@ -36,6 +36,28 @@
 - Na některých zařízení vám ATSE nedá klíč (error -1) tak je třeba přehodit nastavení přímo v nvram
 - Stačí nainstalovat gcc-arm-linux-gnueabi a zbytek je v souboru Zyxel_CFE_nvram_EngDebugFlag.c
 
+## Bootloader unlock v2
+- Modem připojte do libovolého PC s Linuxem
+- Postavte nástroj https://github.com/bmork/zyxel-hacks/
+- Příkazem ```busybox ifconfig eth0 up``` aktivujte ethernet interface
+- Jako root spustě nástroj ```sudo ./zyeng eth0```
+- Zapněte modem a počkejte na výstup:
+```
+Multiboot client version: 1.6
+
+Hit any key to stop autoboot:001
+
+Multiboot server is available for download firmware image!
+Be patient, it should be finish in 15 minutes...
+No file need to download, stop multiboot service!
+
+
+Updated Engineer Debug Flag!
+Magic number didn`t match!
+
+```
+- Resetujte vytažením napájení a přikazem ATSH zkontrolujte výstup ```Boot Module Debug Flag : 01```
+
 ## TODO
 - Vyzkoušet unlock VMG4005-B50A a DM4200
 
