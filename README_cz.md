@@ -24,10 +24,11 @@
 - Na PC si nastavte statickou IP v rozsahu 192.168.1.0/24 krom .1
 - Otevřte TFTP server nastavený se souborem V517ABQA3.1C0.bin
 - Připojte ethernetový kabel
-- Zapněte modem a přerušte autoboot
-- Příkazem ```ATUR IP:V517ABQA3.1C0.bin``` nainstalujte nový firmware a počkejte přibližně minutu.
+- Zapněte modem a přerušte autoboot, nainstalujte nový software jednou z následujících možností:
+- A. Příkazem ```ATUR IP:V517ABQA3.1C0.bin``` nainstalujte nový firmware a počkejte přibližně minutu.
+- B. Otevřete http://192.168.1.1 v prohlížeči, vyberte nový .bin, možnost "Select Only if you want to write misc partition" nechte prázdný (bootloader vybere automaticky správný) a tlačítkem "Update software" nahrajte, router se sám restartuje
 - Po dokončení zápisu se modem z restartuje, počkejte než se na konzoli objeví login Linuxu a pak modem obnovte do továrního nastavení.
-- Po resetu bude webové rozhraní a SSH dostupné na 192.168.1.1, hesla pro supervisor a roota si musíte vygenerovat ze sériového čísla na štítku. ( https://github.com/boginw/zyxel-vmg8825-keygen )
+- Po resetu bude webové rozhraní a SSH dostupné na 192.168.1.1, hesla pro supervisor a roota si musíte vygenerovat ze sériového čísla na štítku. ( https://github.com/boginw/zyxel-vmg8825-keygen ), výstup byde typu zcfgBeCommonGenKeyBySerialNumMethod3
 - Pokud nepotřebujete odemknout bootloader tak je hotovo, DSL si to samo nastaví a do par minut půjde vytočit PPPoE session na VLAN 848
 
 ## Bootloader unlock

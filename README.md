@@ -25,10 +25,11 @@
 - Set your PC to static IP in range 192.168.1.2-254
 - Start TFTP server with clean firmware ( V517ABQA3.1C0.bin )
 - Connect to modems ethernet port
-- Turn on modem and interupt CFE autoboot
-- Run command ```ATUR IP:V517ABQA3.1C0.bin```
+- Turn on modem and interupt CFE autoboot and pick one of following methods
+- A. Run command ```ATUR IP:V517ABQA3.1C0.bin```
+- B. Open "http://192.168.1.1" in your browser, leave "Select Only if you want to write misc partition" blank (bootloader will pick right one), select new .bin file and press "Update software", device will autoreboot to new firmware.
 - Wait for the flashing to complete and let the device boot into the new firmware. Once it boots up, perform a factory reset.
-- Find a tool of your choice to generate supervisor and root passwords from serial number. "zyxel-vmg8825-keygen" tested and working ok
+- Find a tool of your choice to generate supervisor and root passwords from serial number. Ex: https://github.com/boginw/zyxel-vmg8825-keygen, output line will be zcfgBeCommonGenKeyBySerialNumMethod3, tested for S19 and S21 prefixes
 - Unlock done!
 
 ## Bootloader unlock v1 
