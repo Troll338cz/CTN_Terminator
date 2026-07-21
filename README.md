@@ -61,7 +61,9 @@ Magic number didn`t match!
 - Power cycle the device and verify with ATSH output ```Boot Module Debug Flag : 01``` 
 
 ## TODO
-- Test zyxel multicast ✅
+- Test Zyxel multicast ✅
 - Find why ATSE does not accept any seed
 - Maybe make mod fw that does not generate passwords with SN algo
-- Look at VMG4005-B50A and DM4200 [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/)
+- Look at VMG4005-B50A ❓
+- Look at DM4200 ✅- Needs unlock V2, then grab per-device password from ATCK command. 
+- [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/)
