@@ -1,6 +1,6 @@
 
 # Zyxel VMG4005-B60A ( Cetin Terminátor ) Debranding quick guide
-## [[Česky](README_cz.md)]
+## [[Instrukce Česky](README_cz.md)]
 
 ## Requirements
 ### Hardware
@@ -12,12 +12,12 @@
 * Any TFTP Server
 * Terminal client
 * Python3
-* armv7 toolchain that can compile static binary (optional)
+* armv7 toolchain that can compile static binary (v1 only, optional)
 
 ## Disassembly
 - Carefully remove the 2 rubber feet located on the side of the connector near the sticker.
 - Remove the 2 Phillips head screws.
-- Using your favorite tool, pry off the bottom plastic cover, there are clips on each side and 2 clips opposite the connectors.
+- Using your favorite tool, pry off the bottom plastic cover, there are clips on each side and 2 corners opposite the connectors.
 - Remove the circuit board from the top plastic case.
 
 ## Software flash
@@ -25,20 +25,20 @@
 - Set your PC to static IP in range 192.168.1.2-254
 - Start TFTP server with clean firmware ( V517ABQA3.1C0.bin )
 - Connect to modems ethernet port
-- Turn on modem and interupt CFE autoboot and pick one of following methods
+- Turn on modem and interupt CFE autoboot and pick one of following methods:
 - A. Run command ```ATUR IP:V517ABQA3.1C0.bin```
-- B. Open "http://192.168.1.1" in your browser, leave "Select Only if you want to write misc partition" blank (bootloader will pick right one), select new .bin file and press "Update software", device will autoreboot to new firmware.
+- B. Unlock the bootloader, then you can load firmware over embded web recovery at "http://192.168.1.1" directly in your browser, leave "Select Only if you want to write misc partition" blank (bootloader will pick right one), select new .bin file and press "Update software", device will autoreboot to new firmware.
 - Wait for the flashing to complete and let the device boot into the new firmware. Once it boots up, perform a factory reset.
 - Find a tool of your choice to generate supervisor and root passwords from serial number. Ex: https://github.com/boginw/zyxel-vmg8825-keygen, output line will be zcfgBeCommonGenKeyBySerialNumMethod3, tested for S19 and S21 prefixes
 - Unlock done!
 
-## Bootloader unlock v1 
+## Bootloader unlock v1 - old method
 - Try normal ATSE+ATEN commands, if they don't work then go for risky method.
 - Install arm toolchain for cross compile for your linux distribution
 - Follow instructions in Zyxel_CFE_nvram_EngDebugFlag.c
 - Get unlocked bootloader or a brick, this tool is a PoC and i don't guarantee any success, CFE can recover from missing nvram if its not corrupted too badly and you backed up data it needs (if it boots back into OS you can flash back mtd dump backup)...
 
-## Bootloader unlock v2
+## Bootloader unlock v2 - new multicast method
 - Connect modem to a Linux PC
 - Clone and build https://github.com/bmork/zyxel-hacks/ 
 - Bring up ethernet interface ```busybox ifconfig eth0 up```
@@ -59,11 +59,12 @@ Magic number didn`t match!
 
 ```
 - Power cycle the device and verify with ATSH output ```Boot Module Debug Flag : 01``` 
+- For DB4200 only, reboot to CFE again and read out per-device passwords with ```ATCK```
 
 ## TODO
 - Test Zyxel multicast ✅
-- Find why ATSE does not accept any seed
-- Maybe make mod fw that does not generate passwords with SN algo
+- Find why ATSE does not accept any seed ❌
+- Maybe make mod fw that does not generate passwords with SN algo ❌
 - Look at VMG4005-B50A ❓
 - Look at DM4200 ✅- Needs unlock V2, then grab per-device password from ATCK command. 
 - [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/) ✅
