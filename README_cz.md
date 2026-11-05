@@ -60,8 +60,9 @@ Magic number didn`t match!
 - Resetujte vytažením napájení a přikazem ATSH zkontrolujte výstup ```Boot Module Debug Flag : 01```
 
 ## TODO
-- Vyzkoušet unlock DM4200 ✅- Stejný postup, potřebuje unlock c2 a po resetu hesla z ATCK příkazu.
+- Vyzkoušet unlock DM4200 ✅- Stejný postup, potřebuje unlock v2 a po resetu hesla z ATCK příkazu.
 - Vyzkoušet unlock VMG4005-B50A ❓
 - [Firmware k stažení pro DIY odemčení](https://files.qqwee.net/Zyxel/)
+- [ATENv3 online](https://tools.qqwee.net/ZyxelAten36/) ✅
 
 Vyzkoušeno na dvou zažízení oba fungují krásně u O2

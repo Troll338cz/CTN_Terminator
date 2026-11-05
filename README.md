@@ -66,4 +66,5 @@ Magic number didn`t match!
 - Maybe make mod fw that does not generate passwords with SN algo
 - Look at VMG4005-B50A ❓
 - Look at DM4200 ✅- Needs unlock V2, then grab per-device password from ATCK command. 
-- [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/)
+- [Firmware for DIY unlock here](https://files.qqwee.net/Zyxel/) ✅
+- [ATENv3 online](https://tools.qqwee.net/ZyxelAten36/) ✅
